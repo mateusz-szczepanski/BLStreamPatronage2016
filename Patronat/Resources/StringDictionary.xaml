@@ -4,6 +4,16 @@
     xmlns:local="using:Patronat.Resources">
 
     <!-- String resource that can be localized -->
-    <x:String x:Key="headerText">BLStream Patronage 2016</x:String>
-
+    <x:String x:Key="headerMainWindow">BLStream Patronage 2016</x:String>
+    <x:String x:Key="noImages">No images was found in Picture Library!</x:String>
+    <x:String x:Key="deniedPicturesLibrary">The app was denied access to the PicturesLibrary!</x:String>
+    <x:String x:Key="fileName">File name</x:String>
+    <x:String x:Key="fileSize">File size</x:String>
+    <x:String x:Key="fileSizeBytes">bytes</x:String>
+    <x:String x:Key="fileType">File type</x:String>
+    <x:String x:Key="fileDateModified">Date modified</x:String>
+    <x:String x:Key="filePath">File path</x:String>
+    <x:String x:Key="fileCoordinates">File coordinates</x:String>
+    <x:String x:Key="fileLongitude">Longitude</x:String>
+    <x:String x:Key="fileLatitude">Latitude</x:String>
 </ResourceDictionary>
