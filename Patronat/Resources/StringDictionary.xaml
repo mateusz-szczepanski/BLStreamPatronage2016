@@ -5,15 +5,23 @@
 
     <!-- String resource that can be localized -->
     <x:String x:Key="headerMainWindow">BLStream Patronage 2016</x:String>
+    <x:String x:Key="fileProperties">File properties</x:String>
+    <x:String x:Key="photoButton">Take a photo</x:String>
+    <x:String x:Key="listButton">Photo list</x:String>
+    <x:String x:Key="shareButton">Share photo</x:String>
     <x:String x:Key="noImages">No images was found in Picture Library!</x:String>
     <x:String x:Key="deniedPicturesLibrary">The app was denied access to the PicturesLibrary!</x:String>
+    <x:String x:Key="deniedCamera">No camera device found</x:String>
+    <x:String x:Key="noDevice">The app was denied access to the camera</x:String>
     <x:String x:Key="fileName">File name</x:String>
     <x:String x:Key="fileSize">File size</x:String>
     <x:String x:Key="fileSizeBytes">bytes</x:String>
     <x:String x:Key="fileType">File type</x:String>
     <x:String x:Key="fileDateModified">Date modified</x:String>
     <x:String x:Key="filePath">File path</x:String>
-    <x:String x:Key="fileCoordinates">File coordinates</x:String>
+    <x:String x:Key="fileCoordinates">Photo coordinates</x:String>
     <x:String x:Key="fileLongitude">Longitude</x:String>
     <x:String x:Key="fileLatitude">Latitude</x:String>
+    <x:String x:Key="photoTaken">Photo taken</x:String>
+    
 </ResourceDictionary>
