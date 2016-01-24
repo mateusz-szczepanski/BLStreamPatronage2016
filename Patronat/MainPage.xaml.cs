@@ -47,7 +47,7 @@ namespace Patronat
         public Photo takePhoto;
         private StorageFile _imageFile;
         private DataTransferManager _dataTransferManager;
-        private static bool dontIncrement = false;
+        private static bool _dontIncrement = false;
         public MainPage()
         {
             this.InitializeComponent();
@@ -58,7 +58,7 @@ namespace Patronat
             {
                 if (Frame.CanGoBack)
                 {
-                    dontIncrement = true;
+                    _dontIncrement = true;
                     Frame.GoBack();
                     a.Handled = true;
                 }
@@ -82,10 +82,10 @@ namespace Patronat
                 IReadOnlyList<StorageFile> fileList = await query.GetFilesAsync();
                 if (fileList.Count > 0)
                 {
-                    if (dontIncrement && _photoNumber>0)
+                    if (_dontIncrement && _photoNumber>0)
                         _photoNumber--;
 
-                    dontIncrement = false;
+                    _dontIncrement = false;
 
                     if (_photoNumber >= fileList.Count)
                         _photoNumber = 0;
@@ -161,7 +161,7 @@ namespace Patronat
         {
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
             
-            if (e!= null && e.Parameter != null && e.Parameter != "")
+            if (e!= null && e.Parameter != null && e.Parameter.ToString() != "")
             {
                 CustomList s = (CustomList)e.Parameter;
                 _photoNumber = s.Id;

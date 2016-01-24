@@ -31,6 +31,8 @@ namespace Patronat
     {
         public Properties properties;
         private ResourceDictionary _resources;
+        private uint _mobileSize = 80;
+        private uint _desktopSize = 250;
         public CustomListView()
         {
             this.InitializeComponent();
@@ -69,9 +71,9 @@ namespace Patronat
                     uint size = 0;
 
                     if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
-                        size = 80;
+                        size = _mobileSize;
                     else
-                        size = 250;
+                        size = _desktopSize;
 
                     const ThumbnailMode mode = ThumbnailMode.PicturesView;
                     const ThumbnailOptions opt = ThumbnailOptions.ResizeThumbnail;
