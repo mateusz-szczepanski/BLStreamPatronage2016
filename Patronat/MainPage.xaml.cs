@@ -82,7 +82,7 @@ namespace Patronat
                 IReadOnlyList<StorageFile> fileList = await query.GetFilesAsync();
                 if (fileList.Count > 0)
                 {
-                    if (dontIncrement)
+                    if (dontIncrement && _photoNumber>0)
                         _photoNumber--;
 
                     dontIncrement = false;
@@ -161,7 +161,7 @@ namespace Patronat
         {
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
             
-            if (e.Parameter != "")
+            if (e!= null && e.Parameter != null && e.Parameter != "")
             {
                 CustomList s = (CustomList)e.Parameter;
                 _photoNumber = s.Id;

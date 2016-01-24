@@ -91,7 +91,11 @@ namespace Patronat
 
         private void ElementSelected(object sender, TappedRoutedEventArgs e)
         {
-            CustomList selectedElement = properties.ThumbnailsList[((ListView)sender).SelectedIndex];
+            CustomList selectedElement = null;
+            if (((ListView)sender).SelectedIndex>=0)
+            {
+                selectedElement = properties.ThumbnailsList[((ListView)sender).SelectedIndex];
+            }
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(MainPage), selectedElement);
         }

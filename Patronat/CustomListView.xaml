@@ -7,8 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="DarkSlateBlue">
-    <Grid>
+     Name="CustomListViewPage">
+    <Grid >
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState x:Name="WideState">
@@ -16,7 +16,16 @@
                         <AdaptiveTrigger MinWindowWidth="600"/>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="ThumbnailControl.Width" Value="300"/>
+                        <Setter Target="CustomListViewPage.Background" Value="DarkSlateBlue"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="CustomListViewPage.Background" Value="DarkOrange" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
